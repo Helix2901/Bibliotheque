@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background-image {
+  position: fixed;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("homebg.jpg");  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  min-height: 35rem;
+  background-position: center;
+  z-index: 0;
+}
+
+header {
+  background-color: black; 
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  font-family: 'Lobster', cursive;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9;
+
+}
+
+
+
+ h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #333, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+
+.login-buttons {
+  position: absolute;
+  top: calc(50% + 200px); 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 9;
+}
+
+
+.login-buttons button {
+  padding: 15px 30px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #c09c7a86;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-buttons button:hover {
+  background-color: #28a745;
+}
+
+.login-buttons button a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+
+        #contact {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background: linear-gradient(to right, #302d2b, #c09c7a86);
+          color: white;
+          padding: 30px 0;
+          z-index: 1;
+          box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+          animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .contact-info {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .contact-info h3 {
+          margin-top: 0;
+          margin-bottom: 10px;
+          color: #fff;
+          font-size: 24px;
+          font-weight: bold;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          animation: fadeIn 0.5s ease-in-out 0.2s backwards;
+        }
+
+        .contact-info p {
+          margin: 5px 0;
+          color: #f0f0f0;
+          font-size: 16px;
+          transition: color 0.3s ease;
+          animation: fadeIn 0.5s ease-in-out 0.4s backwards;
+        }
+
+        .contact-info p:hover {
+          color: #fff;
+        }
+
+        .contact-info a {
+          color: #f0f0f0;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          animation: fadeIn 0.5s ease-in-out 0.6s backwards;
+        }
+
+        .contact-info a:hover {
+          color: #fff;
+        }
+
+        .contact-info .social-icons {
+          display: flex;
+          animation: fadeIn 0.5s ease-in-out 0.8s backwards;
+        }
+
+        .contact-info .social-icons a {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          background-color: #333;
+          border-radius: 50%;
+          margin: 0 5px;
+          line-height: 40px;
+          text-align: center;
+          transition: background-color 0.3s ease;
+        }
+
+        .contact-info .social-icons a:hover {
+          background-color: #444;
+        }
+
+        .contact-info .social-icons i {
+          color: #f0f0f0;
+          font-size: 20px;
+        }
