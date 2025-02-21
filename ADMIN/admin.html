@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Interface de gestion de la bibliothèque</title>
+    <link rel="stylesheet" href="CSS/admin.css" />
+    <!-- Pour le style -->
+    <script src="admin.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="background-image"></div>
+      <h1>MY LIBRARY</h1>
+      <nav>
+        <ul>
+          <li id="Utilisateurs"><a href="users.php">Utilisateurs</a></li>
+          <li id="meslivres"><a href="livres.php">Livres</a></li>
+          <li class="navigaytion"><a href="#add-book">Ajouter un livre</a></li>
+          <li class="navigaytion">
+            <a href="#update-book">Mettre à jour un livre</a>
+          </li>
+          <li class="navigaytion">
+            <a href="#delete-book">Supprimer un livre</a>
+          </li>
+          <li class="navigaytion">
+            <a href="#add-user">Ajouter un utilisateur</a>
+          </li>
+          <li class="navigaytion">
+            <a href="#delete-user">Supprimer un utilisateur</a>
+          </li>
+          <li><a id="deconnexion" href="../acceuil.html"> Déconnexion</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="welcome-admin">
+      <h2>Welcome Admin</h2>
+    </div>
+    <!-- Section pour ajouter un livre -->
+    <section id="add-book" class="full-page-section modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Ajouter un livre</h2>
+        <form action="addBook.php" method="post">
+          <label for="book-title">Titre du livre :</label><br />
+          <input type="text" id="book-title" name="book-title" required /><br />
+          <label for="book-author">Auteur :</label><br />
+          <input
+            type="text"
+            id="book-author"
+            name="book-author"
+            required
+          /><br />
+          <label for="book-editor">Éditeur :</label><br />
+          <input
+            type="text"
+            id="book-editor"
+            name="book-editor"
+            required
+          /><br />
+          <label for="book-publication-year">Année de parution :</label><br />
+          <input
+            type="number"
+            id="book-publication-year"
+            name="book-publication-year"
+            required
+          /><br />
+          <label for="book-category">Catégorie :</label><br />
+          <input
+            type="text"
+            id="book-category"
+            name="book-category"
+            required
+          /><br />
+          <label for="book-quantity">Quantité :</label><br />
+          <input
+            type="number"
+            id="book-quantity"
+            name="book-quantity"
+            required
+          /><br />
+          <button type="submit" class="btn-submit">Ajouter le livre</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section pour mettre à jour un livre -->
+    <section id="update-book" class="full-page-section modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Mettre à jour un livre</h2>
+        <form action="updtBook.php" method="post">
+          <label for="book-id">ID du livre :</label><br />
+          <input type="number" id="book-id" name="IdLivre" required /><br />
+          <label for="new-book-title">Nouveau titre :</label><br />
+          <input type="text" id="new-book-title" name="new-book-title" required/><br />
+          <label for="new-book-author">Nouveau auteur :</label><br />
+          <input
+            type="text"
+            id="new-book-author"
+            name="new-book-author"
+            required
+          /><br />
+          <label for="new-book-category">Nouvelle catégorie :</label><br />
+          <input
+            type="text"
+            id="new-book-category"
+            name="new-book-category"
+            required
+          /><br />
+          <label for="new-book-quantity">Nouvelle quantité :</label><br />
+          <input
+            type="number"
+            id="new-book-quantity"
+            name="new-book-quantity"
+            required
+          /><br />
+          <label for="new-book-date">Nouvelle date de parution :</label><br />
+          <input type="number" id="new-book-date" name="new-book-date" required/><br />
+          <button type="submit" class="btn-submit">
+            Mettre à jour le livre
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section pour supprimer un livre -->
+    <section id="delete-book" class="full-page-section modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Supprimer un livre</h2>
+        <form action="dltBook.php" method="post">
+          <label for="IdLivre">ID du livre :</label><br />
+          <input type="number" id="IdLivre" name="IdLivre" required /><br />
+          <button type="submit" class="btn-submit">Supprimer le livre</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section pour ajouter un utilisateur -->
+    <section id="add-user" class="full-page-section modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Ajouter un utilisateur</h2>
+        <form action="addusr.php" method="post">
+          <label for="nom">Nom :</label><br />
+          <input type="text" id="nom" name="nom" required /><br />
+          <label for="prenom">Prénom :</label><br />
+          <input type="text" id="prenom" name="prenom" required /><br />
+          <label for="date_naissance">Date de naissance :</label><br />
+          <input
+            type="date"
+            id="date_naissance"
+            name="date_naissance"
+            required
+          /><br />
+          <label for="email">E-mail :</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <button type="submit" class="btn-submit">Ajouter</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section pour supprimer un utilisateur -->
+    <section id="delete-user" class="full-page-section modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Supprimer un utilisateur</h2>
+        <form action="dltusr.php" method="post">
+          <label for="user_id">ID de l'utilisateur :</label><br />
+          <input type="text" id="user_id" name="user_id" required /><br />
+          <button type="submit" class="btn-submit">Supprimer</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
